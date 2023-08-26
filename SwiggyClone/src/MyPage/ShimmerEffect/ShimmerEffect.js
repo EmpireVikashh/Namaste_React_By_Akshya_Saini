@@ -1,9 +1,10 @@
 const ShimmerEffect = ()=>{
     function myDiv(myKey){
     //    console.log(myKey);
-       return <div className="shimmer_child" key={myKey}>
-
-        </div>
+       return (<div className="shimmer_child" key={myKey}>
+               <div className="shimmer_item" ></div>
+               <div className="shimmer_item_name" ></div>
+        </div>)
     }
 
     return(

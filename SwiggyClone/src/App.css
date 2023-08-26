@@ -1,5 +1,6 @@
 #shimmer{
     border: 2px solid black;
+    box-sizing: border-box;
 }
 #shimmer_list{
     display: flex;
@@ -9,10 +10,18 @@
 }
 .shimmer_child{
     width: 20vw;
-    height: 50vh;
+    height: 40vh;
     margin: 5px;
     border: 2px solid black;
     background-color: rgb(221, 210, 195);
+    border-radius: 10px;
+
+}
+.shimmer_item{
+    border: 2px solid rgb(226, 27, 27);
+}
+.shimmer_item_name{
+    border: 2px solid rgb(2, 173, 59);
 }
 .myImage{
     width: 20vw;
