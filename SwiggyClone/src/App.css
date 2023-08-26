@@ -1,0 +1,21 @@
+#shimmer{
+    border: 2px solid black;
+}
+#shimmer_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.shimmer_child{
+    width: 20vw;
+    height: 50vh;
+    margin: 5px;
+    border: 2px solid black;
+    background-color: rgb(221, 210, 195);
+}
+.myImage{
+    width: 20vw;
+    height: 50vh;
+    margin: 20px;
+}
