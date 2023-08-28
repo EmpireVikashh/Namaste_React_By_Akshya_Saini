@@ -1,7 +1,14 @@
 function Header(){
     return(
         <div id="header">
-            <h2>Header</h2>
+            <p>Prayagraj, Uttar Pradesh</p>
+            <ul>
+                <li>Search</li>
+                <li>Offers</li>
+                <li>Vikash</li>
+                <li>Cart</li>
+            </ul>
+            
         </div>
     )
 }
