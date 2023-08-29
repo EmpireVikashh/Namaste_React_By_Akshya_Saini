@@ -9,9 +9,9 @@ const ShimmerEffect = ()=>{
 
     return(
         <div id="shimmer">
-            <h2 id="shimmer_h2">Please! Wait for Response....</h2>
+            <h2 className="shimmer_h2">Please! Wait for Response....</h2>
             <div  id="shimmer_list">
-            {Array(12).fill("").map((e,idx)=>{
+            {Array(22).fill("").map((e,idx)=>{
                 return myDiv(idx);
             })}
             </div>
