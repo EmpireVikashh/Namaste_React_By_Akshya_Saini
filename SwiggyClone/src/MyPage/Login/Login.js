@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 const Login = ()=>{
     function handleSubmit(event){
         event.preventDefault();
@@ -12,7 +13,7 @@ const Login = ()=>{
             <label>Password:</label>
             <input type="text" id="" placeholder="Enter Password"/>
             <button type="submit">Login</button>
-            <label>Forgot Password</label>
+            <Link to="./" >Forgot Password</Link>
         </div>
         </form>
     )
