@@ -78,7 +78,7 @@ justify-content: space-between;
     color:#929292;
 }
 
-#header .location spam{
+#header .location span{
     margin-right: 1rem;
     text-decoration: underline;
     font-weight: bold;
@@ -93,7 +93,7 @@ justify-content: space-between;
     list-style: none;
 
 }
-#header ul li:hover,#header .search:hover,#header .location spam:hover{
+#header ul li:hover,#header .search:hover,#header .location span:hover{
     color:orangered;
     cursor: pointer;
 }
