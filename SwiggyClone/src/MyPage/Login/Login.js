@@ -4,6 +4,14 @@ const Login = ()=>{
         event.preventDefault();
     }
     
+    // const [inpValue, setInpValue] = useState("");
+    // import { useState } from 'react';
+    // <input type="text" value={inpValue} onChange={(e)=>{
+    //   setInpValue(e.target.value);
+    
+    // }}
+    // />
+
     return(
         <form id="Login-form" onSubmit={handleSubmit}>
         <h1>Before Login Please SignUp</h1>

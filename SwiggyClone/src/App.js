@@ -4,15 +4,15 @@ import './App.css';
 
 import Login from './MyPage/Login/Login.js'
 
+
 function App() {
+  
 
   return (
     <div className="App">
-      
+    
       <Login/>
       {/* <Body/> */}
-      
-      
     </div>
   );
 }
