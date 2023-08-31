@@ -98,3 +98,17 @@ justify-content: space-between;
     cursor: pointer;
 }
 
+
+/* Login */
+#Login-Container{
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #f61c1c;
+    padding: 8px;
+    width: 50%;
+    background-color: #e7c7cb;
+    margin: auto;
+    height: 50vh;
+    margin-top: 10%;
+}
