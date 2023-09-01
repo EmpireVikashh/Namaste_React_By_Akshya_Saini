@@ -2,7 +2,6 @@ function Header(){
     return(
         <header>
         <div id="header">
-            div
             <div className="location"><span className="spam">Home</span>Prayagraj, Uttar Pradesh</div>
             <div className="search">Search</div>
 
