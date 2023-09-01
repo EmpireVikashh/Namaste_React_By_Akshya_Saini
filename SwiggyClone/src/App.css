@@ -93,22 +93,57 @@ justify-content: space-between;
     list-style: none;
 
 }
-#header ul li:hover,#header .search:hover,#header .location span:hover{
+#header ul li:hover, #header .search:hover, #header .location span:hover{
     color:orangered;
     cursor: pointer;
 }
 
 
 /* Login */
-#Login-Container{
 
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #f61c1c;
+#Login-form{background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+    height: 100vh;
+}
+
+#Login-Container{
     padding: 8px;
     width: 50%;
-    background-color: #e7c7cb;
     margin: auto;
     height: 50vh;
-    margin-top: 10%;
+    margin-top: 9%
+     
+}
+.login-child {
+    margin: 0.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    padding-left: 0.1rem;
+}
+#login {
+    margin: 28px 11%;
+    width: 17%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: 2px 0;
+    color: #650b0b;
+    border: 1.9px solid #1b2551;
+    cursor: pointer;
+    background-color: #a2dede;
+    margin-left: 12rem;
+}
+.login-child input {
+    height: 35px;
+    border: none;
+    padding-left: 0.3rem;
+    border-radius: 10px;
+}
+.forgot-password{
+    color: blue;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.forgot-password:hover{
+    color: #f61c1c;
+    text-decoration: underline;
 }
