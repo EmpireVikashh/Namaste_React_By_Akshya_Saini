@@ -16,7 +16,7 @@ const Body = ()=>{
         // console.log(resp)
         setData(resp);
     }
-    console.log(data);
+    // console.log(data);
 
     return !data?<ShimmerEffect/>:(
         <div id="body">
