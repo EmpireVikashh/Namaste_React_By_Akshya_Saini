@@ -24,7 +24,7 @@ const UserLocation = () => {
   async function fetchAddress(lat, long) {
     // const request = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?lat=${lat}&long=${long}`);
     // const jsonResponse = await request.json();
-    // const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=c509da363d15442089a73113230409&q=${lat},${long}&aqi=no`);
+    // const request = await fetch(`http://api.weatherapi.com/v1/current.json?key=c509da363d15442089a73113230409&q=${lat},${long}&aqi=yes`);
     // const jsonResponse = await request.json();
     
     // console.log(jsonResponse);

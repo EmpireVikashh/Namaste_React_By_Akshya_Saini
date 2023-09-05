@@ -1,0 +1,94 @@
+
+{
+    
+    "imageGridCards": {
+    "info": [
+      {
+        "id": "1206310",
+        "imageId": "rng/md/carousel/production/08d38e05fd925fe23518f5e6f47d3d8f",
+        "action": {
+          "link": "https://www.swiggy.com/collections/91750?collection_id=91750&tags=layout_VALUE_MEALS&type=rcv2",
+          "text": "Affordable Meals",
+          "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+          "altText": "Meals under 179",
+          "altTextCta": "Order Now"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=91750&tags=layout_VALUE_MEALS",
+        "frequencyCapping": {}
+      },
+      {
+        "id": "852442",
+        "imageId": "rng/md/carousel/production/bdc54e63721168abc2f98c358c3a6d94",
+        "action": {
+          "link": "https://www.swiggy.com/collections/89489?collection_id=89489&type=rcv2",
+          "text": "Holi",
+          "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+          "altText": "Flat deals",
+          "altTextCta": "order now"
+        },
+        "entityId": "swiggy://collectionV2?collection_id=89489",
+        "frequencyCapping": {
+          "cappingEnabled": true,
+          "cappingMode": "VIEW"
+        }
+      },
+      {
+        "id": "1210283",
+        "imageId": "rng/md/carousel/production/2568f3f6928c7615151b9df37ed6f8b8",
+        "action": {
+          "link": "https://www.swiggy.com/menu/60240",
+          "text": "pizzahut",
+          "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+          "altText": "60%",
+          "altTextCta": "Order Now"
+        },
+        "entityId": "60240",
+        "frequencyCapping": {},
+        "isManualAds": true
+      },
+      {
+        "id": "1210292",
+        "imageId": "rng/md/carousel/production/2e54588fcfbfae32c57d1d4d3515f6e5",
+        "action": {
+          "link": "https://www.swiggy.com/menu/231204",
+          "text": "Burger King",
+          "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+          "altText": "Burger King",
+          "altTextCta": "Order Now"
+        },
+        "entityId": "231204",
+        "frequencyCapping": {},
+        "isManualAds": true
+      },
+      {
+        "id": "1210298",
+        "imageId": "rng/md/carousel/production/1049a3107140f7b653204165dd2fb14e",
+        "action": {
+          "link": "https://www.swiggy.com/menu/84849",
+          "text": "Neelaknti",
+          "type": "WEBLINK"
+        },
+        "entityType": "BANNER",
+        "accessibility": {
+          "altText": "Neelkanth Sweets",
+          "altTextCta": "Order Now"
+        },
+        "entityId": "84849",
+        "frequencyCapping": {},
+        "isManualAds": true
+      }
+    ]}
+
+}
