@@ -36,7 +36,7 @@ const UserLocation = () => {
       state:jsonResponse.principalSubdivision
     }
     )
-    console.log(jsonResponse);
+    // console.log(jsonResponse);
   }
 },[])
   return location;
