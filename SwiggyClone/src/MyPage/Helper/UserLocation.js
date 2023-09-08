@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const UserLocation = () => {
-  const [location, setLocation] = useState("..location");
+  const [location, setLocation] = useState({});
 
+  useEffect(()=>{
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(success, error);
   } else {
@@ -30,12 +31,14 @@ const UserLocation = () => {
     // const jsonResponse = await request.json();
     // https://api.geoapify.com/v1/geocode/reverse?lat=51.21709661403662&lon=6.7782883744862374&apiKey=488fc3338ef249eca83d8ad64c05575b
     
-    setLocation(
-      jsonResponse.city,
-      jsonResponse.principalSubdivision
+    setLocation({
+      city:jsonResponse.city,
+      state:jsonResponse.principalSubdivision
+    }
     )
     console.log(jsonResponse);
   }
+},[])
   return location;
 }
 export default UserLocation;
