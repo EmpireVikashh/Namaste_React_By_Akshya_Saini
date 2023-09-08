@@ -78,12 +78,13 @@ justify-content: space-between;
     color:#929292;
 }
 
-#header .location span{
+#header .location .spam{
     margin-right: 1rem;
     text-decoration: underline;
     font-weight: bold;
     color: black;
 }
+
 #header ul {
     display: flex;
     gap:4rem;
@@ -93,9 +94,13 @@ justify-content: space-between;
     list-style: none;
 
 }
-#header ul li:hover, #header .search:hover, #header .location span:hover{
+#header ul li:hover, #header .search:hover, #header .location .spam:hover{
     color:orangered;
     cursor: pointer;
+}
+.Mylocation{
+    color: #f61c1c;
+    text-decoration: underline;
 }
 
 
