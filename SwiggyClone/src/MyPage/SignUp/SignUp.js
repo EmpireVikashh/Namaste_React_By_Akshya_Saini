@@ -13,13 +13,13 @@ const SignUp = ()=>{
                 
                     <input type="text" placeholder="Confirm Password" name="" id="confirm-password"/>
                 
-                    <button id="SignUp-Button" >SignUp</button>
+                    <button className="SignUp-Button" >SignUp</button>
 
-                    <div className="signUp-Child">
+                    <div className="already-account">
                          Already have an account? <span>Login</span>
                     </div>
 
-                    <div id="login-with0">Login with google</div>
+                    <div className="login-with-Google">Login with google</div>
             </div>
         </form>
         
