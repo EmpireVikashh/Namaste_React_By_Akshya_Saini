@@ -22,11 +22,10 @@ const SignUp = () => {
         setUser({ ...user, [e.target.name]: e.target.value });
 
         // if user enter space at starting
-        // if (e.target.value === " ") {
-        //     setUser({ ...user, [e.target.name]: e.target.value.trim() }); //used trim() for ignore space at starting
-        // }
+        if (e.target.value === " ") {
+            setUser({ ...user, [e.target.name]: e.target.value.trim() }); //used trim() for ignore space at starting
+        }
 
-       
     };
 
     const formSubmitHandle = (e) => {
