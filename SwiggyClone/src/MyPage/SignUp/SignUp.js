@@ -2,31 +2,40 @@ import {useState} from "react";
 const SignUp = ()=>{
 
     // set all input value from user
-    const [value, setValue] = useState({
+    const [user, setUser] = useState({
         name:"",
         email:"",
         mobile:"",
         createPass:"",
         confirmPass:""
     })
-    // Authenticate mandatry feilds
-    // const [error, setError] = useState("");
+    console.log(user);
+    // throw error if user put wrong info 
+    const [error, setError] = useState("error");
 
     // Destructure my useState value
-    const {name,email,mobile,createPass,confirmPass} = value;
+    const {name,email,mobile,createPass,confirmPass} = user;
+    console.log(name.length);
 
     const onchangeInputHandle = (e)=>{
+        setUser({...user,[e.target.name]:e.target.value})
+
+        // if user enter space at starting
+        if(e.target.value === " " && e.target.value.length === 1){
+        
+            setUser({...user,[e.target.name]:e.target.value.trim()})//used trim() for ignore space at starting
+        }
         // console.log(e.target.value);
-        setValue({...value,[e.target.name]:[e.target.value]})
+
+
     }
 
     const formSubmitHandle = (e)=>{
         e.preventDefault();
         console.log(name, email, mobile, createPass, confirmPass);
-        if(name === " " || email === " " || mobile === " " || createPass === " " || confirmPass === " "){
+        if(name === "" || email === "" || mobile === "" || createPass === "" || confirmPass === "" ){
             console.log("feild required")
         }
-
     }
 
     return(
@@ -42,6 +51,10 @@ const SignUp = ()=>{
                     <input value={createPass} placeholder="Create Password" name="createPass" id="password" onChange={onchangeInputHandle}/>
                 
                     <input value={confirmPass} placeholder="Confirm Password" name="confirmPass" id="confirm-password" onChange={onchangeInputHandle}/>
+
+                    <div className="error">
+                       My error : {error}
+                    </div>
                 
                     <button className="SignUp-Button">SignUp</button>
 
