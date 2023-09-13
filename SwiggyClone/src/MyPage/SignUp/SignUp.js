@@ -38,7 +38,7 @@ const SignUp = () => {
             createPass === "" ||
             confirmPass === ""
         ) {
-            console.log("feild required");
+            // console.log("feild required");
             return  setError("field all input")
         }
 

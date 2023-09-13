@@ -10,7 +10,7 @@ function Header(){
             <ul>
                 <li>Offers</li>
                 <li>Cart</li>
-                <li>Vikash</li>
+                <li>SignUp/Login</li>
             </ul>
         </div>
         </header>
