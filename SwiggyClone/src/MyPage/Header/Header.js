@@ -5,7 +5,7 @@ function Header(){
     return(
         <header>
         <div id="header">
-            <div className="location"><span className="spam">Home</span><span className="Mylocation">{city}, {state}</span></div>
+            <div className="location"><span className="spam">Home</span><span className="Mylocation">{city} , {state}</span></div>
             <div className="search">Search</div>
             <ul>
                 <li>Offers</li>
