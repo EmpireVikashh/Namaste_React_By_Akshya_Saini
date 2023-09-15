@@ -90,8 +90,8 @@ justify-content: space-between;
 
 #header ul li{
     list-style: none;
-
 }
+
 #header ul li:hover, #header .search:hover, #header .location .spam:hover{
     color:orangered;
     cursor: pointer;
