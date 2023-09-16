@@ -1,4 +1,5 @@
 import UserLocation from '../Helper/UserLocation.js';
+import { Link } from 'react-router-dom';
 function Header(){
     const myLocation = UserLocation();
     const {city,state} = myLocation;
@@ -8,9 +9,15 @@ function Header(){
             <div className="location"><span className="spam">Home</span><span className="Mylocation">{city} , {state}</span></div>
             <div className="search">Search</div>
             <ul>
+                <Link to="/offer">
                 <li>Offers</li>
+                </Link>
+                <Link to="/cart">
                 <li>Cart</li>
+                </Link>
+                <Link to="/signup">
                 <li>SignUp/Login</li>
+                </Link>
             </ul>
         </div>
         </header>

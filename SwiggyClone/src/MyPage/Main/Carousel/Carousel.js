@@ -1,6 +1,6 @@
 import { Images } from "../../Helper/ImageFile";
 const Carousel = ({carouselData})=>{
-    console.log(carouselData);
+    // console.log(carouselData);
     return(
         <div className="carousel-container">
             {carouselData.map((data)=>{
