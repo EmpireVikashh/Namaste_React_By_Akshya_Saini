@@ -109,6 +109,7 @@ justify-content: space-between;
 #main{
     position: relative;
     top: 5rem;
+    left: 1rem;
 }
 
 
@@ -233,4 +234,8 @@ justify-content: space-between;
     color: white;
     font-size: large;
     cursor: pointer;
+}
+
+#footer{
+    margin-top: 5rem;
 }

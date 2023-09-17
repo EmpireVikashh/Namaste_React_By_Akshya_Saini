@@ -1,25 +1,32 @@
 import UserLocation from '../Helper/UserLocation.js';
 import { Link } from 'react-router-dom';
-function Header(){
+function Header() {
     const myLocation = UserLocation();
-    const {city,state} = myLocation;
-    return(
+    const { city, state } = myLocation;
+    return (
         <header>
-        <div id="header">
-            <div className="location"><span className="spam">Home</span><span className="Mylocation">{city} , {state}</span></div>
-            <div className="search">Search</div>
-            <ul>
-                <Link to="/offer">
-                <li>Offers</li>
-                </Link>
-                <Link to="/cart">
-                <li>Cart</li>
-                </Link>
-                <Link to="/signup">
-                <li>SignUp/Login</li>
-                </Link>
-            </ul>
-        </div>
+            <div id="header">
+                <div className="location">
+                    <span className="spam">Home</span>
+                    {
+                        !city ? <span className="Mylocation">Location...</span> :
+                            <span className="Mylocation">{city} {state}</span>
+                    }
+                </div>
+
+                <div className="search">Search</div>
+                <ul>
+                    <Link to="/offer">
+                        <li>Offers</li>
+                    </Link>
+                    <Link to="/cart">
+                        <li>Cart</li>
+                    </Link>
+                    <Link to="/signup">
+                        <li>SignUp/Login</li>
+                    </Link>
+                </ul>
+            </div>
         </header>
     )
 }
