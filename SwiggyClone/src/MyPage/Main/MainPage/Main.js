@@ -1,11 +1,13 @@
-import Carousel from '../Carousel/Carousel.js'
-import RestaurantData from '../../../SwiggyJsonData/myJson.json';
+// import Carousel from '../Carousel/Carousel.js'
+import Imagecarousel from '../Carousel/imagecarousel';
+// import RestaurantData from '../../../SwiggyJsonData/myJson.json';
 
 const Main = ()=>{
 // console.log(RestaurantData);
     return(
        <div id="main"> 
-       <Carousel carouselData={RestaurantData?.card?.carousel?.imageGridCards}/>
+       {/* <Carousel carouselData={RestaurantData?.card?.carousel?.imageGridCards}/> */}
+       <Imagecarousel/>
 
        {/* <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vsdxtvuz2czmvdgcsggq"} alt='myImage' className='myImage'/>
         <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/q0t8dkpigeideecc1hun"} alt='myImage' className='myImage'/>
