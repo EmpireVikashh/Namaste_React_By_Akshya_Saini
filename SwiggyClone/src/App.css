@@ -236,6 +236,11 @@ justify-content: space-between;
     font-size: large;
     cursor: pointer;
 }
+.carousal-desc{
+    margin-left: 2rem;
+    font-size: 1.7rem;;
+
+}
 
 #footer{
     margin-top: 5rem;

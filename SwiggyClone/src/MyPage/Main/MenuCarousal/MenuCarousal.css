@@ -1,10 +1,10 @@
-.offer-product-carousel {
+.menu-product-carousel {
     position: relative;
     overflow: hidden;
     padding: 26px;
 }
 
-.offer-product-container {
+.menu-container {
     padding: 0 10px;
     display: flex;
     overflow-x: hidden;
@@ -12,25 +12,25 @@
    
 }
 
-.pre-btn,
-.next-btn {
+.menu-pre-btn,
+.menu-next-btn {
     border: none;
     width: 60px;
     height: 10vh;
     position: absolute;
-    top: 12rem;
+    top: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.next-btn {
+.menu-next-btn {
     right: 0;
 }
 
-.next-btn p,
-.pre-btn p {
+.menu-next-btn p,
+.menu-pre-btn p {
     font-size: 50px;
     background-color: rgba(255, 255, 255, 0.436);
     box-shadow: 0px 0px 10px 1px black;
@@ -40,10 +40,10 @@
     height: 50px;
     cursor: pointer;
 }
-.offer-mycard {
-    min-width: 50%;
+.menu-mycard {
+    min-width: 25.5%;
     max-width: 300px;
-    height: 320px;
-    margin: 10px;
+    height: 300px;
+    margin: 0px;
     cursor: pointer;
 }

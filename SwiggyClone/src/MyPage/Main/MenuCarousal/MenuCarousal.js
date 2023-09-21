@@ -1,13 +1,15 @@
-import '../../Main/Carousel/imagecarousel.css'
+
+
+import '../MenuCarousal/MenuCarousal.css'
 import React, { useEffect,useState } from 'react';
 import { Images } from '../../Helper/ImageFile.js';
 
-const Imagecarousel = ({carouselData}) => {
+const MenuCarousal = ({carouselData}) => {
     const [box, setBox] = useState();
 
     useEffect(() => {
         // why we use useEffect because i want to load query selector after Dom loaded succesfully
-        let box = document.querySelector('.offer-product-container');//
+        let box = document.querySelector('.menu-container');//
         // console.log(box.clientWidth);
         setBox(box);
       }, []);
@@ -31,13 +33,13 @@ const Imagecarousel = ({carouselData}) => {
         }
     }
     return (
-        <div className="offer-product-carousel">
-            <h2 className='carousal-desc'>Best offers for you</h2>
-            <button className="pre-btn" onClick={btnpressprev}><p>&lt;</p></button>
-            <button className="next-btn" onClick={btnpressnext}><p>&gt;</p></button>
-            <div className="offer-product-container">
+        <div className="menu-product-carousel">
+            <h2 className='carousal-desc'>Vikash, what's on your mind?</h2>
+            <button className="menu-pre-btn" onClick={btnpressprev}><p>&lt;</p></button>
+            <button className="menu-next-btn" onClick={btnpressnext}><p>&gt;</p></button>
+            <div className="menu-container">
             {carouselData.map((data)=>{
-                return <img className="offer-mycard" src={Images + data.imageId} alt="carouselImages" key={data.id}/>
+                return <img className="menu-mycard" src={Images + data.imageId} alt="carouselImages" key={data.id}/>
                 
             })}
 
@@ -46,4 +48,4 @@ const Imagecarousel = ({carouselData}) => {
     )
 }
 
-export default Imagecarousel
+export default MenuCarousal
