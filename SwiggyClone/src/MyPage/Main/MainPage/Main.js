@@ -1,7 +1,8 @@
 // import Carousel from '../Carousel/Carousel.js'
+import RestaurantData from '../../../SwiggyJsonData/myJson.json';
 import Imagecarousel from '../Carousel/imagecarousel.js';
 import MenuCarousal from '../MenuCarousal/MenuCarousal.js';
-import RestaurantData from '../../../SwiggyJsonData/myJson.json';
+import MyRestaurants from '../MyRestaurants/MyRestaurants.js';
 
 const Main = ()=>{
 // console.log(RestaurantData);
@@ -9,7 +10,7 @@ const Main = ()=>{
        <div id="main"> 
        <Imagecarousel carouselData={RestaurantData?.card?.carousel?.imageGridCards}/>
        <MenuCarousal carouselData={RestaurantData?.card?.Dishesh?.imageGridCards}/>
-
+       <MyRestaurants/>
        </div>
     )
 }
