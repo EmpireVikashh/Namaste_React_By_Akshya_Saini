@@ -1,4 +1,4 @@
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 const Login = () => {
     function handleSubmit(event) {
         event.preventDefault();
@@ -31,6 +31,10 @@ const Login = () => {
 
                 <label className="forgot-password" >Forgot Password</label>
                 {/* <Link to="/">Forgot Password</Link> */}
+
+                <div className="dont-account">
+                    I don't have an account? <Link to="/signup" ><span>SignUP</span></Link> 
+                </div>
 
             </div>
         </form>

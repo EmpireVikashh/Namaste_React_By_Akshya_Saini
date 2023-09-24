@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 const SignUp = () => {
     // set all input value from user
@@ -122,7 +123,7 @@ const SignUp = () => {
                 <button className="SignUp-Button">SignUp</button>
 
                 <div className="already-account">
-                    Already have an account? <span>Login</span>
+                    Already have an account? <Link to="/login" ><span>Login</span></Link> 
                 </div>
 
                 <div className="login-with-Google">Login with Google</div>

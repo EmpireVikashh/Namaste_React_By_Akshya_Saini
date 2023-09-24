@@ -14,6 +14,10 @@ const appRouter = createBrowserRouter([
     element:<Body/>,
     errorElement:<Error/>// incase anything not be loaded the my errorComponent will fire
   },
+  // {
+  //   path:"/body",
+  //   element:<Body/>
+  // },
   {
     path:"/login",
     element:<Login/>

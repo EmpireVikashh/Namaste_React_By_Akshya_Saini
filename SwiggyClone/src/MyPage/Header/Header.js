@@ -1,5 +1,6 @@
 import UserLocation from '../Helper/UserLocation.js';
 import { Link } from 'react-router-dom';
+import search from "../ImageFolder/search.png"
 function Header() {
     const myLocation = UserLocation();
     const { city, state } = myLocation;
@@ -7,14 +8,17 @@ function Header() {
         <header>
             <div id="header">
                 <div className="location">
-                    <span className="spam">Home</span>
+                    <Link to="/"><span className="spam">Home</span></Link>
                     {
                         !city ? <span className="Mylocation">Location...</span> :
                             <span className="Mylocation">{city} {state}</span>
                     }
                 </div>
 
-                <div className="search">Search</div>
+                <div className="search">
+                    <input type="text" placeholder="Find your food"/>
+                    <img src={search} alt="" className="search-icon"/>
+                    </div>
                 <ul>
                     <Link to="/offer">
                         <li>Offers</li>
@@ -23,7 +27,7 @@ function Header() {
                         <li>Cart</li>
                     </Link>
                     <Link to="/signup">
-                        <li>SignUp/Login</li>
+                        <li>SignUp</li>
                     </Link>
                 </ul>
             </div>

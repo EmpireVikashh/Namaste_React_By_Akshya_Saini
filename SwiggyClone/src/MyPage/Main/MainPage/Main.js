@@ -5,7 +5,6 @@ import MenuCarousal from '../MenuCarousal/MenuCarousal.js';
 import MyRestaurants from '../MyRestaurants/MyRestaurants.js';
 
 const Main = ()=>{
-// console.log(RestaurantData);
     return(
        <div id="main"> 
        <Imagecarousel carouselData={RestaurantData?.card?.carousel?.imageGridCards}/>
