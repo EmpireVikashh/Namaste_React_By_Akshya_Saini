@@ -3,6 +3,10 @@ import starRatingImage from "../../ImageFolder/star.png";
 import "./myRestCard.css";
 
 const MyRestCards = ({ RestaurantData, CloudImageIdLink }) => {
+
+  // const cuisine = RestaurantData[0].info.cuisines
+  // console.log(cuisine);
+  // console.log(RestaurantData);
   return (
     <div className="MyRestCards">
       {RestaurantData.map((data, idx) => (
