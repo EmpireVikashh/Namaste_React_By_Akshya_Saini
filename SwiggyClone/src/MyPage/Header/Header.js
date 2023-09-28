@@ -1,5 +1,5 @@
 import UserLocation from "../Helper/UserLocation.js";
-import {SearchText} from "../Helper/SearchText.js";
+import SearchText from "../Helper/SearchText.js";
 import { Link } from "react-router-dom";
 import search from "../ImageFolder/search.png";
 import { useState } from "react";
