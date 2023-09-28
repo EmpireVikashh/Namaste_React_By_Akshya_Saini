@@ -1,10 +1,12 @@
 import MyRestCards from "./MyRestCards.js";
 import RestaurantData from "../../../SwiggyJsonData/myJson.json"
 import {CloudImageIdLink} from "../../Helper/ImageFile.js"
+import { useData } from "../../Header/DataContext.js";
 // import filterSearchText from "../../Helper/SearchText.js"
 
 const MyRestaurants = ()=>{
-    
+    const { dataFilter } = useData();
+    console.log(dataFilter)
     return(
         <MyRestCards RestaurantData={RestaurantData.card.topRestaurants.restaurants} CloudImageIdLink={CloudImageIdLink}/>
     )

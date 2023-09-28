@@ -17,7 +17,7 @@ const SignUp = () => {
 
     // Destructure my useState value
     const { name, email, mobile, createPass, confirmPass } = user;
-    console.log(user);
+    // console.log(user);
 
     const onchangeInputHandle = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });

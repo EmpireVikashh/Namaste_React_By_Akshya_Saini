@@ -1,14 +1,12 @@
 import UserLocation from "../Helper/UserLocation.js";
-import SearchText from "../Helper/SearchText.js";
+import Search from "./Search.js";
 import { Link } from "react-router-dom";
-import search from "../ImageFolder/search.png";
-import { useState } from "react";
+
+
 function Header() {
   const myLocation = UserLocation();
-  const [inputText, setInputText] = useState("");
-  // console.log(searchText)
-
   const { city, state } = myLocation;
+
   return (
     <header>
       <div id="header">
@@ -25,26 +23,8 @@ function Header() {
           )}
         </div>
 
-        <div className="search">
-          <input
-            placeholder="Find your food"
-            value={inputText}
-            onChange={(e) => {
-                setInputText(e.target.value);
-            }}
-            onKeyPress={(e)=>{
-                if(e.key==='Enter'){
-                    SearchText(inputText)
-                }
-            }}
-          />
-          <img
-            src={search}
-            alt=""
-            className="search-icon"
-            onClick={() => SearchText(inputText)}
-          />
-        </div>
+            <Search/>
+
         <ul>
           <Link to="/offer">
             <li>Offers</li>
@@ -53,7 +33,7 @@ function Header() {
             <li>Cart</li>
           </Link>
           <Link to="/signup">
-            <li>Swati</li>
+            <li>Signup</li>
           </Link>
         </ul>
       </div>
