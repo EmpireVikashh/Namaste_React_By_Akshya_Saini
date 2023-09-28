@@ -1,17 +1,10 @@
 import search from "../ImageFolder/search.png";
 import { useState } from "react";
-// import RestaurantData from "../../SwiggyJsonData/myJson.json";
-import { useData } from "./DataContext";
+import { useData } from "./SearchRestContext.js";
 
 const Search = () => {
-  const { dataFilter, setDataFilter } = useData();
+  const { setSearchText } = useData();
   const [inputText, setInputText] = useState("");
-
-  function filterData() {
-    // setDataFilter(RestaurantData.card.topRestaurants.restaurants);
-    setDataFilter(inputText);
-  }
-  console.log(dataFilter, "1");
 
   return (
     <div className="search">
@@ -20,10 +13,11 @@ const Search = () => {
         value={inputText}
         onChange={(e) => {
           setInputText(e.target.value);
+          setSearchText(inputText);
         }}
         onKeyPress={(e) => {
           if (e.key === "Enter") {
-            filterData(inputText);
+            setSearchText(inputText);
           }
         }}
       />
@@ -31,7 +25,7 @@ const Search = () => {
         src={search}
         alt=""
         className="search-icon"
-        onClick={() => filterData(inputText)}
+        onClick={() => setSearchText(inputText)}
       />
     </div>
   );

@@ -23,6 +23,7 @@ function Header() {
           )}
         </div>
 
+        {/* My Search component */}
             <Search/>
 
         <ul>

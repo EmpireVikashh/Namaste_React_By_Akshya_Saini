@@ -3,7 +3,7 @@ import Header from '../Header/Header.js'
 // import Footer from '../Footer/Footer.js'
 import RestaurantData from '../Helper/RestaurantData.js';
 import Main from '../Main/MainPage/Main.js';
-import { DataProvider } from '../Header/DataContext.js';
+import { DataProvider } from '../Header/SearchRestContext.js';
 const Body = () => {
 
     const data = RestaurantData();

@@ -417,6 +417,21 @@
             "avgRating": 4.2
           }
         },
+         {
+          "info": {
+            "id": "230204",
+            "name": "Veg Pizza",
+            "cloudinaryImageId": "03704a7e088a34643f5e72923d0d74ba",
+            "locality": "Mahatma Gandhi Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Capsicum",
+              "Mashroom"
+            ],
+            "avgRating": 4.2
+          }
+        },
         {
           "info": {
             "id": "405025",
@@ -431,6 +446,22 @@
               "American",
               "Snacks",
               "Fast Food"
+            ],
+            "avgRating": 4.1
+          }
+        },   
+        {
+          "info": {
+            "id": "215025",
+            "name": "Samosa",
+            "cloudinaryImageId": "ba9db005abeb1257c3bf64867402ca42",
+            "locality": "Sahara Ganj Mall",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹400 for two",
+            "cuisines": [
+              "Aloo",
+              "Mashroom",
+              "Sweet"
             ],
             "avgRating": 4.1
           }
@@ -500,6 +531,36 @@
             ],
             "avgRating": 3.8
           }
+        },   
+        {
+          "info": {
+            "id": "60230",
+            "name": "Dosa Corner",
+            "cloudinaryImageId": "6126c9b45de2cb222405c1af8a321e74",
+            "locality": "MG Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Masala Dosa",
+              "Coconut Dosa"
+            ],
+            "avgRating": 4.8
+          }
+        }, 
+         {
+          "info": {
+            "id": "03230",
+            "name": "Sweet Dish",
+            "cloudinaryImageId": "563316629d456640da4c9be65822d442",
+            "locality": "MG Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Milk Sweet",
+              "Coconut Sweet"
+            ],
+            "avgRating": 4.8
+          }
         },
         {
           "info": {
@@ -521,21 +582,17 @@
         },
         {
           "info": {
-            "id": "229730",
-            "name": "LunchBox - Meals and Thalis",
-            "cloudinaryImageId": "rzpfumdzzpxqawsxckqp",
+            "id": "025730",
+            "name": "Pani puri golgappa",
+            "cloudinaryImageId": "c4d6f60d6535b46594b7d9ac5a43c1f9",
             "locality": "Habibulla Estate Road",
             "areaName": "Hazratganj",
             "costForTwo": "₹200 for two",
             "cuisines": [
-              "Biryani",
-              "North Indian",
-              "Punjabi",
-              "Healthy Food",
-              "Desserts",
-              "Beverages"
+              "Chilli",
+              "Spicy"
             ],
-            "avgRating": 4.1
+            "avgRating": 3.1
           }
         },
         {
@@ -690,6 +747,21 @@
             ],
             "avgRating": 4.3
           }
+        }, 
+         {
+          "info": {
+            "id": "073782",
+            "name": "South indian Dosa",
+            "cloudinaryImageId": "f1bc9ddf53de574cdc35ab2f717df234",
+            "locality": "MG Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+              "Paneer dosa",
+              "Spicy Dosa"
+            ],
+            "avgRating": 3.9
+          }
         },
         {
           "info": {
@@ -759,7 +831,7 @@
         {
           "info": {
             "id": "80226",
-            "name": "Pizza Hut",
+            "name": "Pizza king",
             "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
             "locality": "Sardar Patel Marg",
             "areaName": "Civil Lines",
@@ -853,6 +925,22 @@
             "avgRating": 4.3
           }
         },
+         {
+          "info": {
+            "id": "151366",
+            "name": "Breakfast Nasta",
+            "cloudinaryImageId": "9ca06743f33d3a940100194672eb23e9",
+            "locality": "Mahatma Gandhi Marg",
+            "areaName": "Civil Lines",
+            "costForTwo": "₹200 for two",
+            "cuisines": [
+              "Sabudana",
+              "Pakaudii",
+              "Jalebii"
+            ],
+            "avgRating": 3.3
+          }
+        },
         {
           "info": {
             "id": "392164",
@@ -864,6 +952,36 @@
             "cuisines": [
               "Ice Cream",
               "Desserts"
+            ],
+            "avgRating": 4.5
+          }
+        },
+        {
+          "info": {
+            "id": "392124",
+            "name": "Cold Drinks",
+            "cloudinaryImageId": "b925459fbc1faf59f02f7289eb079a74",
+            "locality": "Tb Sapru Marg",
+            "areaName": "Civil Lines",
+            "costForTwo": "₹120 for two",
+            "cuisines": [
+             "Soft Drink",
+             "Alchohal Madiraa"
+            ],
+            "avgRating": 4.5
+          }
+        },  
+         {
+          "info": {
+            "id": "392464",
+            "name": "Chili potato",
+            "cloudinaryImageId": "6dc3ed2ca21d71acff7c2a51dfe4c720",
+            "locality": "Tb Sapru Marg",
+            "areaName": "Civil Lines",
+            "costForTwo": "₹120 for two",
+            "cuisines": [
+             "chili potato",
+             "French fry"
             ],
             "avgRating": 4.5
           }
@@ -1073,7 +1191,28 @@
             ],
             "avgRating": 3.6
           }
+        },
+         {
+          "info": {
+            "id": "870364",
+            "name": "Cake & Pastries",
+            "cloudinaryImageId": "206068b31aab7c1b78fa24e2745d153d",
+            "locality": "Tashkent Marg",
+            "areaName": "Civil Lines",
+            "costForTwo": "₹300 for two",
+            "cuisines": [
+              "Strawberry",
+              "Vanilla",
+              "Pineapple"
+            ],
+            "avgRating": 4.6
+          }
         }
+
+
+
+
+
       ]
     },
     "title": "Best Places to Eat Across Cities",
