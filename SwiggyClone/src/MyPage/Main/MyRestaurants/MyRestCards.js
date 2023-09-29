@@ -4,8 +4,8 @@ import "./myRestCard.css";
 
 const MyRestCards = ({ RestaurantData, CloudImageIdLink }) => {
 
-  // const cuisine = RestaurantData[0].info.cuisines
-  // console.log(cuisine);
+  const cuisine = RestaurantData[0].info.cuisines
+  console.log(cuisine);
   // console.log(RestaurantData);
   
   return (
@@ -25,6 +25,9 @@ const MyRestCards = ({ RestaurantData, CloudImageIdLink }) => {
           <div className="rating">
             <img src={starRatingImage} alt="star" className="starRating" />
             <h4 className="rest-rating-number"> {data.info.avgRating}</h4>
+          </div>
+          <div className="cuisines">
+             <p> {data.info.cuisines.join(", ")} </p>
           </div>
         </div>
       ))}
