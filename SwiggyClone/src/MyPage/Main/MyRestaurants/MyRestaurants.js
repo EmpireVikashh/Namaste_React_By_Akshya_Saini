@@ -16,11 +16,11 @@ const MyRestaurants = () => {
                 let name = data.info.name.toLowerCase();
                 return name.includes(findText);
             })
-            // console.log(searchText)
+            console.log(searchText, "if")
             setMyData(filterData);
         }
         else if(searchText===""){
-            // console.log(searchText)
+            console.log(searchText, "else")
             setMyData(restaurantsCardInfo);
         }
     }, [searchText, restaurantsCardInfo]);

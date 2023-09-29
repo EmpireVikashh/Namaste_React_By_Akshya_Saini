@@ -23,13 +23,12 @@
   border-radius: 9%;
 }
 .rest-name {
-  text-wrap: nowrap;
+  white-space:nowrap;
   overflow: hidden;
   margin: 0 5px 0 7px;
 }
 
 .rating{
-    
     display: flex;
     align-items: center;
     margin-top: 5px;

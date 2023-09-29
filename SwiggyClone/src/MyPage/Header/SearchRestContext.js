@@ -4,7 +4,7 @@ const SearchRestContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [searchText, setSearchText] = useState("");
-  console.log(children)
+  // console.log(children)
   
   return (
     <SearchRestContext.Provider value={{ searchText, setSearchText }}>
