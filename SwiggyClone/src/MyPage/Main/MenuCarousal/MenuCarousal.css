@@ -52,6 +52,5 @@
     transition: .6s;
 }
 .menu-mycard:hover{
-    /* transition: .6s; */
     transform: scale(.9);
 }
