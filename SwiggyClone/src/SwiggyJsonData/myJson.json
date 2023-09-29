@@ -417,6 +417,36 @@
             "avgRating": 4.2
           }
         },
+        {
+          "info": {
+            "id": "238164",
+            "name": "Cake & Desertes",
+            "cloudinaryImageId": "9ac4e0c3fd124b48ed02e15ddbfb242c",
+            "locality": "Mahatma Gandhi Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Choclate",
+              "Banana"
+            ],
+            "avgRating": 4.2
+          }
+        },
+        {
+          "info": {
+            "id": "230794",
+            "name": "Queen Breakfast point",
+            "cloudinaryImageId": "6f7c465221dc2a24d7b13fca35a917cc",
+            "locality": "Mahatma Gandhi Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Poha",
+              "Manchurian"
+            ],
+            "avgRating": 4.1
+          }
+        },
          {
           "info": {
             "id": "230204",
@@ -428,6 +458,21 @@
             "cuisines": [
               "Capsicum",
               "Mashroom"
+            ],
+            "avgRating": 4.2
+          }
+        },
+        {
+          "info": {
+            "id": "237904",
+            "name": "Noodal Maggie Chowmine",
+            "cloudinaryImageId": "ad76bad563982a820c4678f6204d5cd0",
+            "locality": "Mahatma Gandhi Marg",
+            "areaName": "Hazratganj",
+            "costForTwo": "₹350 for two",
+            "cuisines": [
+              "Spicyy",
+              "Butter Maggie"
             ],
             "avgRating": 4.2
           }

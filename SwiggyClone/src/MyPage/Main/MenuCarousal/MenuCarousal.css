@@ -9,7 +9,7 @@
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
-   
+    
 }
 
 .menu-pre-btn,
@@ -23,10 +23,12 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
 }
 
 .menu-next-btn {
     right: 0;
+    
 }
 
 .menu-next-btn p,
@@ -39,6 +41,7 @@
     width: 50px;
     height: 50px;
     cursor: pointer;
+    
 }
 .menu-mycard {
     min-width: 25.5%;
@@ -46,4 +49,9 @@
     height: 300px;
     margin: 0px;
     cursor: pointer;
+    transition: .6s;
+}
+.menu-mycard:hover{
+    /* transition: .6s; */
+    transform: scale(.9);
 }

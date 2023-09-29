@@ -40,9 +40,7 @@ const MenuCarousal = ({carouselData}) => {
             <div className="menu-container">
             {carouselData.map((data)=>{
                 return <img className="menu-mycard" src={Images + data.imageId} alt="carouselImages" key={data.id}/>
-                
             })}
-
             </div>
         </div>
     )
