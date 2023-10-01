@@ -1,6 +1,6 @@
 import search from "../ImageFolder/search.png";
 import { useEffect, useState } from "react";
-import { useData } from "./SearchRestContext.js";
+import { useData } from "../Body/Context.js";
 
 const Search = () => {
   const { setSearchText } = useData();

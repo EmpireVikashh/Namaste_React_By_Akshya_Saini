@@ -289,4 +289,6 @@ width: 30%;
 
 #footer{
     margin-top: 5rem;
+    border: 2px solid red;
+    background-color: aquamarine;
 }

@@ -397,7 +397,9 @@
             "areaName": "Hazratganj",
             "costForTwo": "₹400 for two",
             "cuisines": [
-              "American"
+              "American",
+              "Pizzas",
+              "Maggie"
             ],
             "avgRating": 4.1
           }
@@ -412,7 +414,8 @@
             "costForTwo": "₹350 for two",
             "cuisines": [
               "Burgers",
-              "American"
+              "American",
+              "Desserts"
             ],
             "avgRating": 4.2
           }

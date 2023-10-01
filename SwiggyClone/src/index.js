@@ -6,7 +6,8 @@ import Login from './MyPage/Login/Login.js'
 import SignUp from './MyPage/SignUp/SignUp.js'
 import Cart from './MyPage/Header/Cart.js'
 import Error from './MyPage/ErrorPage/Error.js'
-import{createBrowserRouter,RouterProvider} from 'react-router-dom';
+import RestaurantMenuList from './MyPage/Main/RestaurantMenuList/RestMenuList.js'
+import{createBrowserRouter,RouterProvider,Outlet} from 'react-router-dom';
 
 const appRouter = createBrowserRouter([
   {
@@ -14,10 +15,6 @@ const appRouter = createBrowserRouter([
     element:<Body/>,
     errorElement:<Error/>// incase anything not be loaded the my errorComponent will fire
   },
-  // {
-  //   path:"/body",
-  //   element:<Body/>
-  // },
   {
     path:"/login",
     element:<Login/>
@@ -30,6 +27,10 @@ const appRouter = createBrowserRouter([
     path:"/cart",
     element:<Cart/>
   },
+  {
+    path:"/restaurantMenuList/:id",
+    element:<RestaurantMenuList/>
+  }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
