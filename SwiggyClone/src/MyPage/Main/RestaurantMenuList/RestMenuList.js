@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import {useData} from "../../Body/Context.js"
-// import { useEffect } from "react";
 
 const RestaurantMenuList = ()=>{
     // it will give us id of restaurant
@@ -9,11 +8,6 @@ const RestaurantMenuList = ()=>{
     console.log(id);
     
     console.log(useData());
-
-    // const {filterRestData} = useData();
-    // useEffect(()=>{
-    //     console.log(filterRestData)
-    //   },[filterRestData])
 
     return(
         <div className="menu-list">

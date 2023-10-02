@@ -12,8 +12,6 @@ const MyRestCards = ({ RestaurantData, CloudImageIdLink }) => {
   useEffect(()=>{
     setFilterRestData(RestaurantData);
   },[filterRestData,RestaurantData,setFilterRestData])
-  console.log(filterRestData);
-
 
   return (
     <div className="MyRestCards">
