@@ -2,8 +2,10 @@ import "./restMenuList.css";
 import { useParams } from "react-router-dom";
 import { useData } from "../../Body/Context.js";
 import addCartImage from "../../ImageFolder/addCart.png";
+import MyCart from "../../Header/Cart.js"
 
 const RestaurantMenuList = () => {
+
 
   if(document.body.scrollTop === 0){
     // document.body.scrollTop = 0;
@@ -20,7 +22,7 @@ const RestaurantMenuList = () => {
   // console.log(filterRestData);
 
   const clickedRest = filterRestData.find((res) => res.info.id === id);
-  console.log(clickedRest);
+  // console.log(clickedRest);
 
   let cuisines = [
     "American",
@@ -44,14 +46,16 @@ const RestaurantMenuList = () => {
 
   return (
     <div className="menu-list">
+        <MyCart/>
       <div className="cart-header">
-        {/* {
+        {
             !clickedRest?(<h1>Restaurant Name : Loading...</h1>):(<h1>Restaurant Name : {clickedRest.info.name}</h1>)
-        } */}
-<h1>Restaurant Name : Loading...</h1>
+        }
         <img src={addCartImage} alt="CartImage" className="CartImage" />
         <li>Cart</li>
       </div>
+      
+
       <div className="menu-list-item">
         {cuisines.map((item, idx) => (
           <div className="items" key={idx}>
