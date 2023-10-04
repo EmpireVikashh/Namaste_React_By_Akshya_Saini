@@ -54,6 +54,7 @@ margin: 3px 0 0 7px;
   margin-left: 7px;
     margin-top: 5px;
     color: #646363;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
+    white-space: nowrap;
     overflow: hidden;
 }
