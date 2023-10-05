@@ -11,7 +11,6 @@ const RestaurantMenuList = () => {
     // document.body.scrollTop = 0;
     document.documentElement.scrollTop=0;
   }
-  // console.log(document.body.scrollTop," ",document.documentElement.scrollTop)
 
   // it will give us id of restaurant
   const param = useParams();
