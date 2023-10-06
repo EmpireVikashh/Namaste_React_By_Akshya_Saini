@@ -5,7 +5,24 @@
 }*/
 .cart-header .CartImage{
     width: 5%;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid orange;
+    background-color: azure;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 } 
+.menu-list-item{
+    position: absolute;
+    top: 5rem;
+    left: 13rem;
+    width: 70%;
+}
 .items{
     margin: 2rem auto;
     border: 2px solid rgb(235, 145, 20);

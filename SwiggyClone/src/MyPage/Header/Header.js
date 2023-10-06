@@ -2,10 +2,13 @@ import UserLocation from "../Helper/UserLocation.js";
 import Search from "./Search.js";
 import { Link } from "react-router-dom";
 import addCartImage from "../ImageFolder/addCart.png";
+import {useSelector} from "react-redux"
+// import store from "../ReduxStore/store.js";
 
 function Header() {
   const myLocation = UserLocation();
   const { city, state } = myLocation;
+  const cartItems = useSelector((store) => store.cart.items)//from redux part
 
   return (
     <header>
@@ -35,7 +38,7 @@ function Header() {
           </Link>
           <Link to="/cart" style={{display: "contents",margin: "0px 0px 0px 0px"}}>
             <img src={addCartImage} alt="CartImage" className="CartImage"/> 
-            <li style={{marginLeft: "-45px"}}>Cart</li>
+            <li style={{marginLeft: "-45px"}}>Cart- {cartItems.length}</li>
           </Link>
         </ul>
       </div>
