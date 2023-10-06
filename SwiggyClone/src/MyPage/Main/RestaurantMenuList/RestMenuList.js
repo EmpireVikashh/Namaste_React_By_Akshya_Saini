@@ -35,7 +35,6 @@ const RestaurantMenuList = () => {
     document.documentElement.scrollTop=0;
   }
 
-
   // it will give us id of restaurant
   const param = useParams();
   const { id } = param;
@@ -54,7 +53,6 @@ const RestaurantMenuList = () => {
   const handleAddItems = (menuItems) =>{
     dispatch(addItem(menuItems));
   }
-
 
   return (
     <div className="menu-list">

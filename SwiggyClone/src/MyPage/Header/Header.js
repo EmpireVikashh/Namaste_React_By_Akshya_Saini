@@ -30,16 +30,15 @@ function Header() {
             <Search/>
 
         <ul>
-          {/* <Link to="/offer">
-            <li>Offers</li>
-          </Link> */}
-          <Link to="/signup" style={{margin: "0px -59px 0px 78px"}}>
+          <Link to="/signup" >
             <li>Signup</li>
           </Link>
+
           <Link to="/cart" style={{display: "contents",margin: "0px 0px 0px 0px"}}>
             <img src={addCartImage} alt="CartImage" className="CartImage"/> 
-            <li style={{marginLeft: "-45px"}}>Cart- {cartItems.length}</li>
+            <li className="cart">Cart &nbsp; {cartItems.length}</li>
           </Link>
+
         </ul>
       </div>
     </header>
