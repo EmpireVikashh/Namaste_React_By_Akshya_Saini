@@ -36,7 +36,7 @@ function Header() {
 
           <Link to="/cart" style={{display: "contents",margin: "0px 0px 0px 0px"}}>
             <img src={addCartImage} alt="CartImage" className="CartImage"/> 
-            <li className="cart">Cart &nbsp; {cartItems.length}</li>
+            <li className="cartName">Cart &nbsp; <span>{cartItems.length}</span></li>
           </Link>
 
         </ul>

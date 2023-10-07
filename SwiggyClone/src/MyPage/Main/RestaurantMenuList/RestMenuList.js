@@ -10,7 +10,7 @@ import addCartImage from "../../ImageFolder/addCart.png";
 
 const RestaurantMenuList = () => {
   let cuisines = [
-    "Paneer",
+    "Idli Dosa",
     "Pizzas",
     "Maggie",
     "Burgers",
@@ -24,11 +24,12 @@ const RestaurantMenuList = () => {
     "Snacks",
     "Mashroom",
     "Pastas",
-    "Italian",
-    "Desserts",
-    "Beverages",
+    "Italian-Pizzas",
+    "Ice-Creams",
+    "Cold Drinks",
+    "Kaju korma",
+    "Butter Paneer"
   ];
-
 
   if (document.body.scrollTop === 0) {
     document.documentElement.scrollTop = 0;
@@ -45,34 +46,57 @@ const RestaurantMenuList = () => {
   const clickedRest = filterRestData.find((res) => res.info.id === id);
   // console.log(clickedRest);
 
-  const cartItems = useSelector((store) => store.cart.items)//from redux part
-  // console.log(cartItems)
+  const cartItems = useSelector((store) => store.cart.items); //from redux part
+  console.log(cartItems)
 
   // send item in our store
   const dispatch = useDispatch();
   const addFoodItems = (menuItems) => {
     dispatch(addItem(menuItems));
-  }
+  };
+
 
   return (
     <div className="menu-list">
       <div className="cart-header">
-        {
-          !clickedRest ? (<h2 style={{ margin: "7px 0 0 0" }} >Restaurant Name : Loading...</h2>) : (<h2 style={{ margin: "7px 0 0 0" }}>Restaurant Name : {clickedRest.info.name}</h2>)
-        }
-        <Link to="/cart"><h2 className="cart-Text">Cart &nbsp; <span>{cartItems.length}</span></h2> <img src={addCartImage} alt="cartimg" /> </Link>
-
+        {!clickedRest ? (
+          <h2 style={{ margin: "7px 0 0 0" }}>Restaurant Name : Loading...</h2>
+        ) : (
+          <h2 style={{ margin: "7px 0 0 0" }}>
+            Restaurant Name : {clickedRest.info.name}
+          </h2>
+        )}
+        <Link to="/cart">
+          <h2 className="cart-Text">
+            Cart &nbsp; <span>{cartItems.length}</span>
+          </h2>
+          <img src={addCartImage} alt="cartimg" />
+        </Link>
       </div>
-
 
       <div className="menu-list-item">
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
             <div className="item-price">
               <h2>{menuItems}</h2>
-              <p>{Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹ <span> {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire</span> </p>
+              <p className="price">
+                {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹{" "}
+                <span className="discount">
+                  
+                  {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire
+                </span>
+              </p>
             </div>
-            <button onClick={() => { addFoodItems(menuItems) }} >Add to cart</button>
+            <button
+              onClick={() => {
+                addFoodItems({
+                  item: menuItems,
+                  price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
+                });
+              }}
+            >
+              Add to cart
+            </button>
           </div>
         ))}
       </div>

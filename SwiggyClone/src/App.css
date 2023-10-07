@@ -106,11 +106,14 @@ justify-content: space-between;
     top: -9px;
     left: 95px;
 }
-#header ul a .cart{
+#header ul a .cartName{
     z-index: 1;
-    color: #f1eded;
+    color: black;
     font-weight: 600;
     font-size: larger;
+}
+#header ul a .cartName span{
+    color: white;
 }
 
 
