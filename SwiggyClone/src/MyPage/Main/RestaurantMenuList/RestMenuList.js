@@ -30,8 +30,8 @@ const RestaurantMenuList = () => {
   ];
 
 
-  if(document.body.scrollTop === 0){
-    document.documentElement.scrollTop=0;
+  if (document.body.scrollTop === 0) {
+    document.documentElement.scrollTop = 0;
   }
 
   // it will give us id of restaurant
@@ -50,7 +50,7 @@ const RestaurantMenuList = () => {
 
   // send item in our store
   const dispatch = useDispatch();
-  const addFoodItems = (menuItems) =>{
+  const addFoodItems = (menuItems) => {
     dispatch(addItem(menuItems));
   }
 
@@ -58,18 +58,21 @@ const RestaurantMenuList = () => {
     <div className="menu-list">
       <div className="cart-header">
         {
-          !clickedRest?(<h2 style={{margin: "7px 0 0 0"}} >Restaurant Name : Loading...</h2>):(<h2 style={{margin: "7px 0 0 0"}}>Restaurant Name : {clickedRest.info.name}</h2>)
+          !clickedRest ? (<h2 style={{ margin: "7px 0 0 0" }} >Restaurant Name : Loading...</h2>) : (<h2 style={{ margin: "7px 0 0 0" }}>Restaurant Name : {clickedRest.info.name}</h2>)
         }
-        <Link to="/cart"><h2 className="cart-Text">Cart &nbsp; <span>{cartItems.length}</span></h2> <img src={addCartImage} alt="cartimg"/> </Link>
-        
+        <Link to="/cart"><h2 className="cart-Text">Cart &nbsp; <span>{cartItems.length}</span></h2> <img src={addCartImage} alt="cartimg" /> </Link>
+
       </div>
-      
+
 
       <div className="menu-list-item">
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
-            <h2>{menuItems}</h2>
-            <button onClick={()=>{addFoodItems(menuItems)}} >Add to cart</button>
+            <div className="item-price">
+              <h2>{menuItems}</h2>
+              <p>{Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹ <span> {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire</span> </p>
+            </div>
+            <button onClick={() => { addFoodItems(menuItems) }} >Add to cart</button>
           </div>
         ))}
       </div>

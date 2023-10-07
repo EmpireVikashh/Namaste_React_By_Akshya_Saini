@@ -1,13 +1,14 @@
 .cart-header{
     display: flex;
     justify-content: space-between;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     background-color: #dff2ef;
     padding: 1rem;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    box-shadow: 0px -10px 21px 0px #343537d1;
 } 
 .cart-header a{
     display: flex;
@@ -43,7 +44,17 @@
     display: flex;
     justify-content: space-between;
 }
+.items .item-price p span{
+    background-color: rgb(233 200 200);
+    padding: 3px;
+    color: red;
+}
 
 .items button{
     cursor: pointer;
+    height: 28px;
+    border: 1px solid green;
+    padding: 0 4px;
+    margin: 8px 0 0 0;
+    background: aliceblue;
 }
