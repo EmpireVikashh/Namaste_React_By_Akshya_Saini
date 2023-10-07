@@ -5,7 +5,7 @@ import { useData } from "../../Body/Context.js";
 import { useSelector } from "react-redux";
 import { addItem } from "../../ReduxStore/cartSlice";
 import { useDispatch } from "react-redux";
-// import addCartImage from "../../ImageFolder/addCart.png";
+import addCartImage from "../../ImageFolder/addCart.png";
 // import MyCart from "../../Header/Cart.js"
 
 const RestaurantMenuList = () => {
@@ -31,7 +31,6 @@ const RestaurantMenuList = () => {
 
 
   if(document.body.scrollTop === 0){
-    // document.body.scrollTop = 0;
     document.documentElement.scrollTop=0;
   }
 
@@ -47,10 +46,11 @@ const RestaurantMenuList = () => {
   // console.log(clickedRest);
 
   const cartItems = useSelector((store) => store.cart.items)//from redux part
-  console.log(cartItems)
+  // console.log(cartItems)
 
+  // send item in our store
   const dispatch = useDispatch();
-  const handleAddItems = (menuItems) =>{
+  const addFoodItems = (menuItems) =>{
     dispatch(addItem(menuItems));
   }
 
@@ -58,12 +58,10 @@ const RestaurantMenuList = () => {
     <div className="menu-list">
       <div className="cart-header">
         {
-          !clickedRest?(<h2>Restaurant Name : Loading...</h2>):(<h2>Restaurant Name : {clickedRest.info.name}</h2>)
+          !clickedRest?(<h2 style={{margin: "7px 0 0 0"}} >Restaurant Name : Loading...</h2>):(<h2 style={{margin: "7px 0 0 0"}}>Restaurant Name : {clickedRest.info.name}</h2>)
         }
-        <Link to="/cart"> <h1 >Cart- {cartItems.length}</h1> </Link>
-
-        {/* <img src={addCartImage} alt="CartImage" className="CartImage" />
-        <h2>Cart</h2> */}
+        <Link to="/cart"><h2 className="cart-Text">Cart &nbsp; <span>{cartItems.length}</span></h2> <img src={addCartImage} alt="cartimg"/> </Link>
+        
       </div>
       
 
@@ -71,7 +69,7 @@ const RestaurantMenuList = () => {
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
             <h2>{menuItems}</h2>
-            <button onClick={()=>{handleAddItems(menuItems)}} >Add to cart</button>
+            <button onClick={()=>{addFoodItems(menuItems)}} >Add to cart</button>
           </div>
         ))}
       </div>
