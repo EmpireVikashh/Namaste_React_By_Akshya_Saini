@@ -5,7 +5,7 @@ import Body from './MyPage/Body/Body.js'
 import Main from './MyPage/Main/MainPage/Main';
 import Login from './MyPage/Login/Login.js'
 import SignUp from './MyPage/SignUp/SignUp.js'
-import Cart from './MyPage/Header/Cart.js'
+import Cart from './MyPage/Cart/Cart.js'
 import Error from './MyPage/ErrorPage/Error.js'
 import RestaurantMenuList from './MyPage/Main/RestaurantMenuList/RestMenuList.js'
 import{createBrowserRouter,RouterProvider} from 'react-router-dom';

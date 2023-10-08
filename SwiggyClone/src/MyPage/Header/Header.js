@@ -3,7 +3,6 @@ import Search from "./Search.js";
 import { Link } from "react-router-dom";
 import addCartImage from "../ImageFolder/addCart.png";
 import {useSelector} from "react-redux"
-// import store from "../ReduxStore/store.js";
 
 function Header() {
   const myLocation = UserLocation();

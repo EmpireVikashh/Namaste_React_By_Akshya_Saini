@@ -52,9 +52,9 @@ const RestaurantMenuList = () => {
   // send item in our store
   const dispatch = useDispatch();
   const addFoodItems = (menuItems) => {
+    
     dispatch(addItem(menuItems));
   };
-
 
   return (
     <div className="menu-list">
@@ -82,7 +82,6 @@ const RestaurantMenuList = () => {
               <p className="price">
                 {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹{" "}
                 <span className="discount">
-                  
                   {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire
                 </span>
               </p>
@@ -90,6 +89,7 @@ const RestaurantMenuList = () => {
             <button
               onClick={() => {
                 addFoodItems({
+                  id:idx,
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
                 });

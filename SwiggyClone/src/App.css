@@ -114,6 +114,7 @@ justify-content: space-between;
 }
 #header ul a .cartName span{
     color: white;
+    font-size: smaller;
 }
 
 

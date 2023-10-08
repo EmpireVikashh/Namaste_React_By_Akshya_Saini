@@ -20,7 +20,7 @@
 }
 .cart-header .cart-Text{
     z-index: 1;
-    margin: 11px -29px 0 0;
+    margin: 10px -30px 0 0;
     color: black;
 }
 .cart-header .cart-Text:hover{
@@ -28,6 +28,7 @@
 }
 .cart-header .cart-Text span{
     color: #dff2ef;
+    font-size: smaller;
 }
 
 .menu-list-item{
