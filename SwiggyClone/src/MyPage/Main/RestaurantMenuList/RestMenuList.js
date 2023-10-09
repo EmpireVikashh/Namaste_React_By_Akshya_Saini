@@ -1,12 +1,13 @@
 import "./restMenuList.css";
+import addCartImage from "../../ImageFolder/addCart.png";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useData } from "../../Body/Context.js";
 import { useSelector } from "react-redux";
-import { addItem } from "../../ReduxStore/cartSlice";
 import { useDispatch } from "react-redux";
-import addCartImage from "../../ImageFolder/addCart.png";
-// import MyCart from "../../Header/Cart.js"
+import { addItem } from "../../ReduxStore/cartSlice";
+import { nanoid } from "@reduxjs/toolkit";
+
 
 const RestaurantMenuList = () => {
   let cuisines = [
@@ -52,7 +53,6 @@ const RestaurantMenuList = () => {
   // send item in our store
   const dispatch = useDispatch();
   const addFoodItems = (menuItems) => {
-    
     dispatch(addItem(menuItems));
   };
 
@@ -89,7 +89,7 @@ const RestaurantMenuList = () => {
             <button
               onClick={() => {
                 addFoodItems({
-                  id:idx,
+                  id:nanoid(),
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
                 });

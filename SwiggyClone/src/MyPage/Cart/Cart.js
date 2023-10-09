@@ -10,8 +10,8 @@ const Cart = () => {
   console.log(cartItems);
 
   const dispatch = useDispatch();
-  const removeFoodItem = () => {
-    dispatch(removeItem());
+  const removeFoodItem = (Id) => {
+    dispatch(removeItem(Id));
   };
 
   return (
@@ -19,7 +19,7 @@ const Cart = () => {
       <h2 className="itemLength">{cartItems.length} - Items</h2>
       <div className="My_Cart_List">
         {cartItems.map((myItem, idx) => (
-          <div className="cart-card" key={idx}>
+          <div className="cart-card" key={myItem.id}>
             <div className="item-image">
               <img src={imgLink} alt="itemImage" />
             </div>
@@ -32,7 +32,7 @@ const Cart = () => {
               <p>1</p>
               <button
                 onClick={() => {
-                  removeFoodItem();
+                  removeFoodItem(myItem.id);
                 }}
               >
                 -
