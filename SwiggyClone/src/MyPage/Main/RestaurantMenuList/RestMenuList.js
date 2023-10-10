@@ -53,7 +53,23 @@ const RestaurantMenuList = () => {
   // send item in our store
   const dispatch = useDispatch();
   const addFoodItems = (menuItems) => {
-    dispatch(addItem(menuItems));
+
+    if(cartItems.length === 0){
+      dispatch(addItem(menuItems));
+      console.log("dispatch == 0");
+    }
+
+    else if(cartItems.length > 0) {
+      for(let i=0; i<cartItems.length; i++){
+        if(cartItems[i].itemNo === menuItems.itemNo){
+          console.log("quantity ++");
+          cartItems[i].quantity = cartItems[i].quantity + 1
+        }
+      }
+    }
+    // else{
+    //   dispatch(addItem(menuItems));
+    // }
   };
 
   return (
@@ -80,7 +96,7 @@ const RestaurantMenuList = () => {
             <div className="item-price">
               <h2>{menuItems}</h2>
               <p className="price">
-                {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹{" "}
+                {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹
                 <span className="discount">
                   {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire
                 </span>
@@ -89,9 +105,11 @@ const RestaurantMenuList = () => {
             <button
               onClick={() => {
                 addFoodItems({
+                  itemNo:idx,
                   id:nanoid(),
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
+                  quantity:1
                 });
               }}
             >

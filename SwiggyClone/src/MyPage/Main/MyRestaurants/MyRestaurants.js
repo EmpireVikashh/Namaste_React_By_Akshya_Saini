@@ -12,7 +12,7 @@ const MyRestaurants = () => {
 
     useEffect(() => {
         if (searchText) {
-            const filterData = restaurantsCardInfo.filter((data, idx) => {
+            const filterData = restaurantsCardInfo.filter((data) => {
                 let findText = searchText.toLowerCase();
                 let name = data.info.name.toLowerCase();
                 return name.includes(findText);

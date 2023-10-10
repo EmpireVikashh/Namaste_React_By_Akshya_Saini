@@ -7,7 +7,7 @@ const Cart = () => {
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf";
   // const store = useSelector((store)=>store)// it will giv us whole store that is not a good way
   const cartItems = useSelector((store) => store.cart.items); // here we subscribing only item part
-  console.log(cartItems);
+  // console.log(cartItems);
 
   const dispatch = useDispatch();
   const removeFoodItem = (Id) => {
@@ -28,9 +28,9 @@ const Cart = () => {
               <p>{myItem.price}₹</p>
             </div>
             <div className="add-remove">
-              <button>+</button>
-              <p>1</p>
-              <button
+              <button id="++addBtn">+</button>
+              <p>{myItem.quantity}</p>
+              <button id="--removeBtn"
                 onClick={() => {
                   removeFoodItem(myItem.id);
                 }}
