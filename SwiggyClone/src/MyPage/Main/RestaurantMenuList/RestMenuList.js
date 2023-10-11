@@ -53,23 +53,7 @@ const RestaurantMenuList = () => {
   // send item in our store
   const dispatch = useDispatch();
   const addFoodItems = (menuItems) => {
-
-    if(cartItems.length === 0){
-      dispatch(addItem(menuItems));
-      console.log("dispatch == 0");
-    }
-
-    else if(cartItems.length > 0) {
-      for(let i=0; i<cartItems.length; i++){
-        if(cartItems[i].itemNo === menuItems.itemNo){
-          console.log("quantity ++");
-          cartItems[i].quantity = cartItems[i].quantity + 1
-        }
-      }
-    }
-    // else{
-    //   dispatch(addItem(menuItems));
-    // }
+    dispatch(addItem(menuItems));
   };
 
   return (
