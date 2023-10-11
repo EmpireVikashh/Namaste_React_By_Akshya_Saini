@@ -1,18 +1,24 @@
 import "./cart.css";
 import { useSelector, useDispatch } from "react-redux"; // it is subscribing our store
-import { removeItem } from "../ReduxStore/cartSlice";
+import { decreaseItem, increaseItem } from "../ReduxStore/cartSlice";
 
 const Cart = () => {
   const imgLink =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf";
   // const store = useSelector((store)=>store)// it will giv us whole store that is not a good way
   const cartItems = useSelector((store) => store.cart.items); // here we subscribing only item part
-  // console.log(cartItems);
+  console.log(cartItems);
 
   const dispatch = useDispatch();
-  const removeFoodItem = (Id) => {
-    dispatch(removeItem(Id));
+
+  const increaseFoodItem = (itemNo) => {
+    dispatch(increaseItem(itemNo));
   };
+  
+  const decreaseFoodItem = (itemNo) => {
+    dispatch(decreaseItem(itemNo));
+  };
+
 
   return (
     <div id="My-cart">
@@ -28,11 +34,13 @@ const Cart = () => {
               <p>{myItem.price}₹</p>
             </div>
             <div className="add-remove">
-              <button id="++addBtn">+</button>
+              <button id="++addBtn" onClick={() => {
+                increaseFoodItem(myItem.itemNo);
+              }}>+</button>
               <p>{myItem.quantity}</p>
               <button id="--removeBtn"
                 onClick={() => {
-                  removeFoodItem(myItem.id);
+                  decreaseFoodItem(myItem.itemNo);
                 }}
               >
                 -

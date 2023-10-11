@@ -89,8 +89,8 @@ const RestaurantMenuList = () => {
             <button
               onClick={() => {
                 addFoodItems({
-                  itemNo:idx,
                   id:nanoid(),
+                  itemNo:idx,
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
                   quantity:1
