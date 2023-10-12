@@ -1,4 +1,3 @@
-import search from "../ImageFolder/search.png";
 import { useEffect, useState } from "react";
 import { useData } from "../Body/Context.js";
 
@@ -25,12 +24,12 @@ const Search = () => {
           }
         }}
       />
-      <img
+      {/* <img
         src={search}
         alt=""
         className="search-icon"
         onClick={() => setSearchText(inputText)}
-      />
+      /> */}
     </div>
   );
 };

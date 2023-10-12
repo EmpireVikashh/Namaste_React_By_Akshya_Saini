@@ -127,22 +127,22 @@ width: 30%;
 }
 .search > input{
     position: relative;
-    top: 19px;
+    top: -1px;
     width: 99%;
     padding-left: 8px;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 9px;
     height: 7vh;
     border: none;
-    box-shadow: -1px 1px 10px #afafaf;
+    box-shadow: 0px 2px 6px #AFAFAD;
 }
-.search-icon{
+/* .search-icon{
     width: 9%;
     height: 5vh;
     position: relative;
     left: 20rem;
     top: -1.3rem;
-}
+} */
 .Mylocation{
     color: #f61c1c;
     /* text-decoration: underline; */

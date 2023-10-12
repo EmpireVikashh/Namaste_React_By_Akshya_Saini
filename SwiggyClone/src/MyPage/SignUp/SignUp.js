@@ -107,6 +107,7 @@ const SignUp = () => {
                     placeholder="Create Password"
                     name="createPass"
                     id="password"
+                    type="password"
                     onChange={onchangeInputHandle}
                 />
 
@@ -115,6 +116,7 @@ const SignUp = () => {
                     placeholder="Confirm Password"
                     name="confirmPass"
                     id="confirm-password"
+                    type="password"
                     onChange={onchangeInputHandle}
                 />
 
