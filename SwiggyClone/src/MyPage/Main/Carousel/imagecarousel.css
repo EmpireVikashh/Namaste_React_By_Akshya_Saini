@@ -2,6 +2,7 @@
     position: relative;
     overflow: hidden;
     padding: 26px;
+    margin-bottom: -26px;
 }
 
 .offer-product-container {
@@ -43,7 +44,7 @@
 .offer-mycard {
     min-width: 50%;
     max-width: 300px;
-    height: 320px;
-    margin: 10px;
+    height: 296px;
+    margin: 7px 10px;
     cursor: pointer;
 }

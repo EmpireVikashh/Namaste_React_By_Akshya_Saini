@@ -78,7 +78,7 @@ const RestaurantMenuList = () => {
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
             <div className="item-price">
-              <h2>{menuItems}</h2>
+              <h3>{menuItems}</h3>
               <p className="price">
                 {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹
                 <span className="discount">
