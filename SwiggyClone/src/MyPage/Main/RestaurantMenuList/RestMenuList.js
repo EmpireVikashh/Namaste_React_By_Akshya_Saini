@@ -7,9 +7,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../ReduxStore/cartSlice";
 import { nanoid } from "@reduxjs/toolkit";
-import Header from "../../Header/Header.js"
+import Header from "../../Header/Header.js";
 // import { CloudImageIdLink } from "../../Helper/ImageFile.js"
-
 
 const RestaurantMenuList = () => {
   let cuisines = [
@@ -31,7 +30,7 @@ const RestaurantMenuList = () => {
     "Ice-Creams",
     "Cold Drinks",
     "Kaju korma",
-    "Butter Paneer"
+    "Butter Paneer",
   ];
 
   if (document.body.scrollTop === 0) {
@@ -50,7 +49,7 @@ const RestaurantMenuList = () => {
   console.log(clickedRest);
 
   const cartItems = useSelector((store) => store.cart.items); //from redux part
-  console.log(cartItems)
+  console.log(cartItems);
 
   // send item in our store
   const dispatch = useDispatch();
@@ -79,11 +78,30 @@ const RestaurantMenuList = () => {
       <Header />
 
       <div className="menu-list-item">
-        
-      <div id="restInfo">
-      <h2>{clickedRest?.info?.name}</h2>
-      {/* <img src={CloudImageIdLink + clickedRest?.info?.cloudinaryImageId} alt="myphoto" /> */}
-      </div>
+        <div id="rest_info">
+          <div id="restBackgroung">
+            {/* src={CloudImageIdLink + clickedRest?.info?.cloudinaryImageId} */}
+            <img
+              src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/jordan-food-cover.jpg"
+              alt="myphoto"
+            />
+          </div>
+          <div className="rest_name_rating">
+            <img
+              src="https://www.lembergelectric.com/hs-fs/hubfs/_images/_inset_images/StarRating.jpg?width=450&name=StarRating.jpg"
+              alt="ratings"
+            />
+            <h2>Welcome to <br />
+              {clickedRest?.info?.name}</h2>
+          </div>
+          <div className="rest_details">
+            <p>{clickedRest?.info?.costForTwo}</p>
+            <p>{clickedRest?.info?.cuisines.join(", ")}</p>
+            <p>
+              {clickedRest?.info?.areaName},{clickedRest?.info?.locality}{" "}
+            </p>
+          </div>
+        </div>
 
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
@@ -103,7 +121,7 @@ const RestaurantMenuList = () => {
                   itemNo: idx,
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
-                  quantity: 1
+                  quantity: 1,
                 });
               }}
             >
