@@ -45,7 +45,7 @@ const RestaurantMenuList = () => {
   // console.log(filterRestData);
 
   const clickedRest = filterRestData.find((res) => res.info.id === id);
-  // console.log(clickedRest);
+  console.log(clickedRest);
 
   const cartItems = useSelector((store) => store.cart.items); //from redux part
   console.log(cartItems)

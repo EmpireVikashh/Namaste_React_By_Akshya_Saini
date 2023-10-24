@@ -10,7 +10,7 @@ const cartSlice = createSlice({
         addItem: (state,action) => {
             const {itemNo} = action.payload; 
             const item = state.items.find((item) => item.itemNo === itemNo);
-            // if item has already present in stor don't be push again else push 
+            // if item has already present in store we won't push again else push 
             if (item) {
                 // item.quantity = item.quantity  + 1;
                 // console.log(item)
@@ -27,7 +27,7 @@ const cartSlice = createSlice({
                 item.price = currPrice*item.quantity;
               }
         },
-        decreaseItem: (state,action) =>{//which data(argument) i would pass in reamoveItem that will came into my action(parameter)
+        decreaseItem: (state,action) =>{//the data(argument) i had pass in reamoveItem that will came into my action(parameter)
             const item = state.items.find((item) => item.itemNo === action.payload);
             if(item.quantity > 1){
                 let currPrice = item.price/item.quantity;

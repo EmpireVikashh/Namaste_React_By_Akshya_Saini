@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 const RestaurantData = ()=>{
     const [data, setData] = useState();
     useEffect(()=>{
-    setTimeout(()=>{setData(jsonData)},1000) ;  
+    setTimeout(()=>{setData(jsonData)},1500) ;  
     // getRestrauntData();
 })
 

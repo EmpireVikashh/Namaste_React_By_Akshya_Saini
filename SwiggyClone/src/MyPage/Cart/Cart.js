@@ -14,11 +14,10 @@ const Cart = () => {
   const increaseFoodItem = (itemNo) => {
     dispatch(increaseItem(itemNo));
   };
-  
+
   const decreaseFoodItem = (itemNo) => {
     dispatch(decreaseItem(itemNo));
   };
-
 
   return (
     <div id="My-cart">
@@ -34,11 +33,17 @@ const Cart = () => {
               <p>{myItem.price}₹</p>
             </div>
             <div className="add-remove">
-              <button id="++addBtn" onClick={() => {
-                increaseFoodItem(myItem.itemNo);
-              }}>+</button>
+              <button
+                id="++addBtn"
+                onClick={() => {
+                  increaseFoodItem(myItem.itemNo);
+                }}
+              >
+                +
+              </button>
               <p>{myItem.quantity}</p>
-              <button id="--removeBtn"
+              <button
+                id="--removeBtn"
                 onClick={() => {
                   decreaseFoodItem(myItem.itemNo);
                 }}
