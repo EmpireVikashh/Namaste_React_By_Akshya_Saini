@@ -1,12 +1,14 @@
 import "./restMenuList.css";
-import addCartImage from "../../ImageFolder/addCart.png";
-import { Link } from "react-router-dom";
+// import addCartImage from "../../ImageFolder/addCart.png";
+// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useData } from "../../Body/Context.js";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../ReduxStore/cartSlice";
 import { nanoid } from "@reduxjs/toolkit";
+import Header from "../../Header/Header.js"
+// import { CloudImageIdLink } from "../../Helper/ImageFile.js"
 
 
 const RestaurantMenuList = () => {
@@ -39,7 +41,7 @@ const RestaurantMenuList = () => {
   // it will give us id of restaurant
   const param = useParams();
   const { id } = param;
-  // console.log(id);
+  console.log(id);
 
   const { filterRestData } = useData();
   // console.log(filterRestData);
@@ -58,7 +60,7 @@ const RestaurantMenuList = () => {
 
   return (
     <div className="menu-list">
-      <div className="cart-header">
+      {/* <div className="cart-header">
         {!clickedRest ? (
           <h2 style={{ margin: "7px 0 0 0" }}>Restaurant Name : Loading...</h2>
         ) : (
@@ -72,9 +74,17 @@ const RestaurantMenuList = () => {
           </h2>
           <img src={addCartImage} alt="cartimg" />
         </Link>
-      </div>
+      </div> */}
+
+      <Header />
 
       <div className="menu-list-item">
+        
+      <div id="restInfo">
+      <h2>{clickedRest?.info?.name}</h2>
+      {/* <img src={CloudImageIdLink + clickedRest?.info?.cloudinaryImageId} alt="myphoto" /> */}
+      </div>
+
         {cuisines.map((menuItems, idx) => (
           <div className="items" key={idx}>
             <div className="item-price">
@@ -89,11 +99,11 @@ const RestaurantMenuList = () => {
             <button
               onClick={() => {
                 addFoodItems({
-                  id:nanoid(),
-                  itemNo:idx,
+                  id: nanoid(),
+                  itemNo: idx,
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
-                  quantity:1
+                  quantity: 1
                 });
               }}
             >

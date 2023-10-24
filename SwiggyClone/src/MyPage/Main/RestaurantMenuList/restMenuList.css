@@ -1,7 +1,6 @@
 .cart-header{
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid orange; */
     background-color: #dff2ef;
     padding: 1rem;
     position: fixed;
@@ -33,9 +32,76 @@
 
 .menu-list-item{
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     width: 100%;
 }
+/* .menu-list-item #restInfo{
+    margin: 2rem auto;
+    width: 68%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px -1px 20px 1px #df7b70d1;
+    height: 45vh;
+    align-items: center;
+    border-radius: 0 0 28px 28px;
+    background-image: url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/jordan-food-cover.jpg);
+    background-size: 58rem 19rem;
+    
+} */
+
+#restInfo {
+    margin: 2rem auto;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 60vmin;
+    height: 50vmin;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+      ),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+    animation: bg-spin 6s linear infinite;
+  }
+  
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+  
+  #restInfo:hover {
+    animation-play-state: paused;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+  
+
+
+
+
+
+
+
+/* #restInfo img{
+    width: 39%;
+    height: 29vh;
+} */
+
+
+
 .items{
     margin: 2rem auto;
     border: 2px solid rgb(235, 145, 20);

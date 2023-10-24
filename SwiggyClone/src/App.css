@@ -8,6 +8,7 @@
 }
 :root {
     --shimmer-bg-color: #e5e5e5;
+    --shadow:0px -10px 21px 0px #343537d1;
   }
 
 /* Shimmer effect */
