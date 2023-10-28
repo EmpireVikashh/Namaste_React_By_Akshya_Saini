@@ -7,6 +7,7 @@ import { addItem } from "../../ReduxStore/cartSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import Header from "../../Header/Header.js";
 import { useEffect } from "react";
+import {ImageArray} from '../../Helper/ImageFile';
 
 const RestaurantMenuList = () => {
   let cuisines = [
@@ -31,10 +32,10 @@ const RestaurantMenuList = () => {
     "Butter Paneer",
   ];
 
-  useEffect(()=>{
-  // Because i want to load my page initially from top, and we does'nt want to go at top again after click on any btn
+  useEffect(() => {
+    // Because i want to load my page initially from top, and we does'nt want to go at top again after click on any btn
     document.documentElement.scrollTop = 0;
-  },[])
+  }, []);
 
   // it will give us id of restaurant
   const param = useParams();
@@ -58,22 +59,6 @@ const RestaurantMenuList = () => {
 
   return (
     <div className="menu-list">
-      {/* <div className="cart-header">
-        {!clickedRest ? (
-          <h2 style={{ margin: "7px 0 0 0" }}>Restaurant Name : Loading...</h2>
-        ) : (
-          <h2 style={{ margin: "7px 0 0 0" }}>
-            Restaurant Name : {clickedRest.info.name}
-          </h2>
-        )}
-        <Link to="/cart">
-          <h2 className="cart-Text">
-            Cart &nbsp; <span>{cartItems.length}</span>
-          </h2>
-          <img src={addCartImage} alt="cartimg" />
-        </Link>
-      </div> */}
-
       <Header />
 
       <div className="menu-list-item">
@@ -86,19 +71,18 @@ const RestaurantMenuList = () => {
             />
           </div>
           <div className="rest_name_rating">
-            <img 
+            <img
               src="https://static.vecteezy.com/system/resources/thumbnails/013/743/123/small/five-stars-rating-icon-png.png"
               alt="ratings"
             />
-            <h2>Welcome to <br />
-              "{clickedRest?.info?.name}"</h2>
+            <h2>
+              Welcome to <br />"{clickedRest?.info?.name}"
+            </h2>
           </div>
           <div className="rest_details">
-            <p>{clickedRest?.info?.costForTwo}</p>
-            <p>{clickedRest?.info?.cuisines.join(", ")}</p>
-            <p>
-              {clickedRest?.info?.areaName}, {clickedRest?.info?.locality}{" "}
-            </p>
+            <p>🤑 {clickedRest?.info?.costForTwo}</p>
+            <p>🍻 {clickedRest?.info?.cuisines.join(", ")}</p>
+            <p>🏡 {clickedRest?.info?.areaName}, {clickedRest?.info?.locality}{" "}</p>
           </div>
         </div>
 
@@ -107,12 +91,14 @@ const RestaurantMenuList = () => {
             <div className="item-price">
               <h3>{menuItems}</h3>
               <p className="price">
-                {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹
+                {Math.floor(Math.random() * (300 - 150 + 1)) + 150}₹ -
                 <span className="discount">
                   {Math.floor(Math.random() * 11) + 10}% OFF | USE @Empire
                 </span>
               </p>
             </div>
+            <div className="addCartBtn_img">
+              <img src="https://media.istockphoto.com/id/1218254547/photo/varied-food-carbohydrates-protein-vegetables-fruits-dairy-legumes-on-wood.webp?b=1&s=170667a&w=0&k=20&c=uGHRWrmqv4Nxdj7iUO4iYavWLjqFB3uwH1K3RQ9NID0=" alt="cartImg" />
             <button
               onClick={() => {
                 addFoodItems({
@@ -126,6 +112,7 @@ const RestaurantMenuList = () => {
             >
               Add to cart
             </button>
+              </div>
           </div>
         ))}
       </div>

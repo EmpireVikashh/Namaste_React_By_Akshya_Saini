@@ -55,8 +55,6 @@
 display: flex;
 align-items: center;
 justify-content: space-around;
-/* box-shadow: 0px 1px 3px 2px #d0d5ded1;
-background-image: linear-gradient(225deg, #FF3CAC 0%, #ffffff 50%, #2B86C5 100%); */
 height: 50vh;
 }
 
@@ -135,24 +133,46 @@ height: 50vh;
 
 .items{
     margin: 2rem auto;
-    border: 2px solid rgb(235, 145, 20);
     width: 55%;
-    padding: 1rem;
+    padding: 0 0 1rem 0;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1.3px solid #b36464;
+    align-items: center;
 }
 .items .item-price p .discount{
     background-color: rgb(233 200 200);
     padding: 3px;
     color: red;
     font-size: small;
+    border-radius: 6px;
+}
+.items .addCartBtn_img{
+  width: 20%;
+  height: 15vh;
+}
+.items .addCartBtn_img img{
+  width: 100%;
+  border-radius: 7px;
 }
 
-.items button{
-    cursor: pointer;
-    height: 28px;
-    border: 1px solid green;
-    padding: 0 4px;
-    margin: 8px 0 0 0;
-    background: aliceblue;
+.items .addCartBtn_img button{
+  cursor: pointer;
+  height: 28px;
+  border: 1px solid rgb(241, 4, 0);
+  padding: 0 4px;
+  margin: 8px 0 0 0;
+  background: rgb(143, 255, 135);
+  position: relative;
+  z-index: 2;
+  left: 2rem;
+  bottom: 2.5rem;
+  border-radius: 4px;
+  transition: .6s;
+}
+.items .addCartBtn_img button:hover{
+  background-color: rgb(255, 136, 164);
+  border: 1px solid rgb(148, 134, 134);
+  transition: all .6s;
+  transform: scale(.9);
 }

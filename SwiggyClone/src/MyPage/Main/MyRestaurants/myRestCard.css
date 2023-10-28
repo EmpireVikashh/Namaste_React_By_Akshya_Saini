@@ -13,16 +13,16 @@
   transition: .6s;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.24);
 }
-.rest-card-item > a{
-  text-decoration: auto;
-  color: black;
-}
 
 .rest-card-item:hover{
   transform: scale(1.05);
   z-index: 2;
-  background-color: #eaeaea;
-  
+  background-color: #eaeaea; 
+}
+
+.rest-card-item > a{
+  text-decoration: auto;
+  color: black;
 }
 .rest-card-item  .item-img > img {
   width: 100%;
