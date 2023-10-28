@@ -10,14 +10,16 @@ const cartSlice = createSlice({
         addItem: (state,action) => {
             const {itemNo} = action.payload; 
             const item = state.items.find((item) => item.itemNo === itemNo);
-            // if item has already present in store we won't push again else push 
-            if (item) {
-                // item.quantity = item.quantity  + 1;
-                // console.log(item)
-            } 
-            else {
+            // if item has not present in store then only we push else don't do anything
+            if (!item) {
                 state.items.unshift(action.payload);
+            } 
+            /*
+            else {
+                 item.quantity = item.quantity  + 1;
+                console.log(item)
             }
+            */
         },
         increaseItem:(state,action) => {
             const item = state.items.find((item) => item.itemNo === action.payload);

@@ -1,6 +1,4 @@
 import "./restMenuList.css";
-// import addCartImage from "../../ImageFolder/addCart.png";
-// import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useData } from "../../Body/Context.js";
 import { useSelector } from "react-redux";
@@ -8,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../ReduxStore/cartSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import Header from "../../Header/Header.js";
-// import { CloudImageIdLink } from "../../Helper/ImageFile.js"
+import { useEffect } from "react";
 
 const RestaurantMenuList = () => {
   let cuisines = [
@@ -33,9 +31,10 @@ const RestaurantMenuList = () => {
     "Butter Paneer",
   ];
 
-  if (document.body.scrollTop === 0) {
+  useEffect(()=>{
+  // Because i want to load my page initially from top, and we does'nt want to go at top again after click on any btn
     document.documentElement.scrollTop = 0;
-  }
+  },[])
 
   // it will give us id of restaurant
   const param = useParams();
@@ -87,18 +86,18 @@ const RestaurantMenuList = () => {
             />
           </div>
           <div className="rest_name_rating">
-            <img
-              src="https://www.lembergelectric.com/hs-fs/hubfs/_images/_inset_images/StarRating.jpg?width=450&name=StarRating.jpg"
+            <img 
+              src="https://static.vecteezy.com/system/resources/thumbnails/013/743/123/small/five-stars-rating-icon-png.png"
               alt="ratings"
             />
             <h2>Welcome to <br />
-              {clickedRest?.info?.name}</h2>
+              "{clickedRest?.info?.name}"</h2>
           </div>
           <div className="rest_details">
             <p>{clickedRest?.info?.costForTwo}</p>
             <p>{clickedRest?.info?.cuisines.join(", ")}</p>
             <p>
-              {clickedRest?.info?.areaName},{clickedRest?.info?.locality}{" "}
+              {clickedRest?.info?.areaName}, {clickedRest?.info?.locality}{" "}
             </p>
           </div>
         </div>
