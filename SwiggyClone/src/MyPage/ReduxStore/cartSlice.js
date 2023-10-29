@@ -46,7 +46,7 @@ const cartSlice = createSlice({
         }
     }
 })
-
+// console.log('redx', cartSlice.actions);
 export default cartSlice.reducer;// it will be import in store
 
 export const {addItem,increaseItem,decreaseItem,clearCart} = cartSlice.actions; // it will be import at where we want to use their features  

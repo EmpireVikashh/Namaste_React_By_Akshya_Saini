@@ -98,7 +98,9 @@ const RestaurantMenuList = () => {
               </p>
             </div>
             <div className="addCartBtn_img">
-              <img src="https://media.istockphoto.com/id/1218254547/photo/varied-food-carbohydrates-protein-vegetables-fruits-dairy-legumes-on-wood.webp?b=1&s=170667a&w=0&k=20&c=uGHRWrmqv4Nxdj7iUO4iYavWLjqFB3uwH1K3RQ9NID0=" alt="cartImg" />
+              <img 
+              src={ImageArray[idx]}
+              alt="cartImg" />
             <button
               onClick={() => {
                 addFoodItems({
@@ -107,6 +109,7 @@ const RestaurantMenuList = () => {
                   item: menuItems,
                   price: Math.floor(Math.random() * (300 - 150 + 1)) + 150,
                   quantity: 1,
+                  imageData:ImageArray[idx]
                 });
               }}
             >

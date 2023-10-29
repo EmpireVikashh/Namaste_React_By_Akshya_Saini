@@ -25,6 +25,7 @@
 
 .cart-card .item-image img{
     width: 100%;
+    height: 28vh;
     border-radius: 9%;
 }
 
@@ -42,4 +43,12 @@
     border: 2px solid greenyellow;
     font-size: large;
     background-color: cornsilk;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: .9s;
+}
+.My_Cart_List .cart-card .add-remove button:hover{
+    background-color: aqua;
+    border: 1px solid black;
+    transition: .9s;
 }
