@@ -24,12 +24,6 @@ const Search = () => {
           }
         }}
       />
-      {/* <img
-        src={search}
-        alt=""
-        className="search-icon"
-        onClick={() => setSearchText(inputText)}
-      /> */}
     </div>
   );
 };

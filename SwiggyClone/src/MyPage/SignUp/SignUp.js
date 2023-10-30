@@ -31,7 +31,7 @@ const SignUp = () => {
 
     const formSubmitHandle = (e) => {
         e.preventDefault();
-        console.log(name, email, mobile, createPass, confirmPass);
+        // console.log(name, email, mobile, createPass, confirmPass);
         if (
             name === "" ||
             email === "" ||

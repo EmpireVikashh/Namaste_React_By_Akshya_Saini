@@ -21,6 +21,8 @@ const Cart = () => {
   return (
     <div id="My-cart">
       <h2 className="itemLength">{cartItems.length} - Items</h2>
+      <div className="cartAndPayment">
+
       <div className="My_Cart_List">
         {cartItems.map((myItem, idx) => (
           <div className="cart-card" key={myItem.id}>
@@ -52,6 +54,12 @@ const Cart = () => {
             </div>
           </div>
         ))}
+      </div>
+      
+      <div className="totalPayment">
+        Payment of all Item
+      </div>
+
       </div>
     </div>
   );

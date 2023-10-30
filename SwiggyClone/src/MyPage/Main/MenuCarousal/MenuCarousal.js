@@ -21,7 +21,7 @@ const MenuCarousal = ({carouselData}) => {
         if(box){//if box have the value the only button will work
             let width = box.clientWidth;
             box.scrollLeft = box.scrollLeft - width;
-            console.log(width)
+            // console.log(width)
         }
     }
 
@@ -29,7 +29,7 @@ const MenuCarousal = ({carouselData}) => {
         if(box){
         let width = box.clientWidth;
         box.scrollLeft = box.scrollLeft + width;
-        console.log(width)
+        // console.log(width)
         }
     }
     return (

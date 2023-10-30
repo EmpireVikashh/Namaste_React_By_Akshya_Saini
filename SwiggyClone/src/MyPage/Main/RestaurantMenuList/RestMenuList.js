@@ -40,16 +40,16 @@ const RestaurantMenuList = () => {
   // it will give us id of restaurant
   const param = useParams();
   const { id } = param;
-  console.log(id);
+  // console.log(id);
 
   const { filterRestData } = useData();
   // console.log(filterRestData);
 
   const clickedRest = filterRestData.find((res) => res.info.id === id);
-  console.log(clickedRest);
+  // console.log(clickedRest);
 
   const cartItems = useSelector((store) => store.cart.items); //from redux part
-  console.log(cartItems);
+  console.log("restMenuList", cartItems);
 
   // send item in our store
   const dispatch = useDispatch();
