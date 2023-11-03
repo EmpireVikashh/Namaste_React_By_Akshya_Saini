@@ -40,7 +40,7 @@ const SignUp = () => {
             confirmPass === ""
         ) {
             // console.log("feild required");
-            return  setError("field all input")
+            return  setError("Field all Input 🤨😏")
         }
 
         else if(name.length < 3 || name.length > 30){
@@ -78,6 +78,7 @@ const SignUp = () => {
         
         <form action="" id="signUp-form" onSubmit={formSubmitHandle}>
             <div id="signUp-container">
+                <h2>Signup your Account!</h2>
                 <input
                     value={name}
                     placeholder="Name"
