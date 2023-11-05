@@ -24,9 +24,12 @@ const Cart = () => {
 
   return (
     <div id="My-cart">
-      <Link to="/">
-        <h2 className="itemLength">{cartItems.length} - Home</h2>
-      </Link>
+      <div className="itemLength">
+        <h2>
+          <Link to="/">{cartItems.length} - Home</Link>
+        </h2>
+      </div>
+
       {cartItems.length === 0 ? (
         <div className="cartEmpty">
           <img

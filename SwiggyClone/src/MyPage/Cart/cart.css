@@ -4,10 +4,14 @@
 .itemLength {
   padding: 1rem;
   background-color: rgb(239, 239, 190);
-  color: rgb(223, 136, 23);
+  
   position: fixed;
   width: 100%;
   z-index: 1;
+}
+.itemLength h2 a{
+  color: rgb(223, 136, 23);
+  text-decoration: none;
 }
 #My-cart .cartEmpty{
   width: 100%;

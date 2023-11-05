@@ -14,8 +14,8 @@ const Login = () => {
 
     return (
         <form id="Login-form" onSubmit={handleSubmit}>
-            <h1>Before Login Please SignUp</h1>
             <div id="Login-Container">
+            <h1 className="login-child">Login your Account</h1>
 
                 <div className="login-child">
                     <label className="login-child user-email" >Username or Email:</label>
@@ -27,10 +27,12 @@ const Login = () => {
                     <input type="text" id="password" placeholder="Enter Password" />
                 </div>
 
+                <div className="login-child login_Forgot">
                 <button type="submit" id="login">Login</button>
-
                 <label className="forgot-password" >Forgot Password</label>
                 {/* <Link to="/">Forgot Password</Link> */}
+                </div>
+
 
                 <div className="dont-account">
                     I don't have an account? <Link to="/signup" ><span>SignUP</span></Link> 
